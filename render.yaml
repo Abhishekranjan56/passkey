@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: medibunny-assetlinks
+    env: node
+    buildCommand: bun install
+    startCommand: bun index.ts
+    envVars:
+      - key: NODE_ENV
+        value: production
+
