@@ -1,0 +1,21 @@
+{
+    "name": "web-server",
+    "module": "index.ts",
+    "type": "module",
+    "private": true,
+    "scripts": {
+      "start": "bun index.ts",
+      "dev": "bun --watch index.ts"
+    },
+    "devDependencies": {
+      "@types/bun": "latest"
+    },
+    "peerDependencies": {
+      "typescript": "^5.8.3"
+    },
+    "dependencies": {
+      "@types/express": "^5.0.3",
+      "express": "^5.1.0"
+    }
+  }
+  
