@@ -1,10 +1,16 @@
 services:
   - type: web
     name: medibunny-assetlinks
-    env: node
-    buildCommand: bun install
-    startCommand: bun index.ts
-    envVars:
-      - key: NODE_ENV
-        value: production
-
+    env: static
+    buildCommand: echo "Static site - no build needed"
+    staticPublishPath: .
+    headers:
+      - path: /.well-known/assetlinks.json
+        name: Content-Type
+        value: application/json
+      - path: /.well-known/assetlinks.json
+        name: Access-Control-Allow-Origin
+        value: "*"
+      - path: /.well-known/apple-app-site-association
+        name: Content-Type
+        value: application/json
